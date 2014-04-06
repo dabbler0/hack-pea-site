@@ -18,19 +18,10 @@
     });
     return document.getElementById('signup').addEventListener('click', function(event) {
       var input;
-      console.log(inputs[0].value);
-      console.log((function() {
-        var _i, _len, _results;
-        _results = [];
-        for (_i = 0, _len = inputs.length; _i < _len; _i++) {
-          input = inputs[_i];
-          _results.push(input.value);
-        }
-        return _results;
-      })());
       return $.ajax({
         url: '/register',
         data: {
+          'name': document.getElementById('name').value,
           'email': document.getElementById('email').value,
           'organisation': document.getElementById('organisation').value,
           'members': JSON.stringify((function() {
