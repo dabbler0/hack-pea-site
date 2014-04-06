@@ -50,7 +50,7 @@ body {
   background-color: #eb212e;
   border-color: #bd2132;
 }
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:focus {
   background-color: #bd2132;
   border-color: #eb212e;
 }
@@ -62,7 +62,7 @@ body {
 a {
   color: #d00;
 }
-a:hover {
+a:hover, a:focus {
   color: #f00;
   text-decoration: underline;
 }
