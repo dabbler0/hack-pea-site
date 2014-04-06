@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>ECC Hackathon</title>
+    <title>HackExeter</title>
 
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="main.css" rel="stylesheet"/>
@@ -19,14 +19,15 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
           </button>
-          <a class="navbar-brand" href="index.html">ECC Hackathon</a>
+          <a class="navbar-brand" href="index.html">HackExeter</a>
         </div>
 
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
             <li class="active"><a href="register.html">Register</a></li>
+            <li><a href="sponsor.html">Sponsor</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -40,16 +41,19 @@
       </div>
       <div class="input-group spaced">
         <span class="input-group-addon">Organisation</span>
-        <input type="text" class="form-control" id="organisation" placeholder="Phillips Exeter Academy"/>
+        <input type="text" class="form-control" id="organisation" placeholder="Generic Academy"/>
       </div>
       <h2>Members</h2>
       <div id="memberslist">
-        <div class="input-group spaced" id="initialmember">
-          <input type="text" class="form-control" placeholder="John Smith"/>
+        <div class="input-group spaced">
+          <input type="text" class="form-control" placeholder="John Smith" id="initialmember"/>
         </div>
       </div>
-      <br/>
-      <button class="btn btn-secondary btn-sm" id="addmember">+member</button>
+      <button class="btn btn-secondary btn-sm" id="addmember"><span class="glyphicon glyphicon-plus" style="opacity:0.7"></span></button>
+      <br/><br/>
+      <p>
+        If you need to change your team information later, email us at <a href="mailto:hackexeter@gmail.com">hackexeter@gmail.com</a>.
+      </p>
       <hr/>
       <button class="btn btn-primary btn-lg pull-right" id="signup">Sign Up</button>
     </div>

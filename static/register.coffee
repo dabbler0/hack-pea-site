@@ -13,9 +13,14 @@ window.onload = ->
     inputs.push newInput
 
   document.getElementById('signup').addEventListener 'click', (event) ->
-    console.log {
-      'email': document.getElementById('email')
-      'organisation': document.getElementById('organisation')
-      'members': JSON.stringify (input.value for input in inputs)
-    }
-    location.href = 'index.html'
+    console.log inputs[0].value
+    console.log (input.value for input in inputs)
+    $.ajax
+      url: '/register'
+      data: {
+        'email': document.getElementById('email').value
+        'organisation': document.getElementById('organisation').value
+        'members': JSON.stringify (input.value for input in inputs)
+      }
+      success: ->
+        location.href = 'index.html'

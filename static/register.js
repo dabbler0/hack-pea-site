@@ -17,20 +17,35 @@
     });
     return document.getElementById('signup').addEventListener('click', function(event) {
       var input;
-      console.log({
-        'email': document.getElementById('email'),
-        'organisation': document.getElementById('organisation'),
-        'members': JSON.stringify((function() {
-          var _i, _len, _results;
-          _results = [];
-          for (_i = 0, _len = inputs.length; _i < _len; _i++) {
-            input = inputs[_i];
-            _results.push(input.value);
-          }
-          return _results;
-        })())
+      console.log(inputs[0].value);
+      console.log((function() {
+        var _i, _len, _results;
+        _results = [];
+        for (_i = 0, _len = inputs.length; _i < _len; _i++) {
+          input = inputs[_i];
+          _results.push(input.value);
+        }
+        return _results;
+      })());
+      return $.ajax({
+        url: '/register',
+        data: {
+          'email': document.getElementById('email').value,
+          'organisation': document.getElementById('organisation').value,
+          'members': JSON.stringify((function() {
+            var _i, _len, _results;
+            _results = [];
+            for (_i = 0, _len = inputs.length; _i < _len; _i++) {
+              input = inputs[_i];
+              _results.push(input.value);
+            }
+            return _results;
+          })())
+        },
+        success: function() {
+          return location.href = 'index.html';
+        }
       });
-      return location.href = 'index.html';
     });
   };
 
