@@ -6,6 +6,7 @@ from google.appengine.ext import ndb
 # Record
 # A record of a single signup (database entry).
 class Record(ndb.Model):
+    name = ndb.StringProperty(indexed=False)
     email = ndb.StringProperty(indexed=False)
     organisation = ndb.StringProperty(indexed=False)
     members = ndb.StringProperty(repeated=True)
@@ -21,6 +22,7 @@ class RegistrationHandler(webapp2.RequestHandler):
         # for this registration.
         record = Record(parent=ndb.Key('Records', 'default'))
         
+        record.name = self.request.get('name')
         record.email = self.request.get('email')
         record.organisation = self.request.get('organisation')
         record.members = json.loads(self.request.get('members'))
