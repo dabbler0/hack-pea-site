@@ -7,7 +7,7 @@ window.onload = ->
 
   document.getElementById('addmember').addEventListener 'click', (event) ->
     newDiv = document.createElement('div'); newDiv.className = 'input-group spaced'
-    newInput = document.createElement('input'); newInput.type = 'text'; newInput.className = 'form-control'; newInput.placeholder = 'John Smith'
+    newInput = document.createElement('input'); newInput.type = 'name'; newInput.className = 'form-control'; newInput.placeholder = 'John Smith'
     newDiv.appendChild newInput
     members.appendChild newDiv
     inputs.push newInput
