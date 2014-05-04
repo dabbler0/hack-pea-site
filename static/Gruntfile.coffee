@@ -6,7 +6,8 @@ module.exports = (grunt) ->
         sourceMap: true
       build:
         files:
-          'register.js': ['register.coffee']
+          'js/register.js': ['src/register.coffee']
+          'js/submit.js': ['src/submit.coffee']
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
 
